@@ -1,0 +1,18 @@
+Pierre's Bakery 2.0
+
+2 classes, Vendor && Order
+
+Vendor props:
+- name
+- description
+- <List> of Order(s)
+- id
+
+Order props:
+- title
+- description
+- price
+- date
+- id
+
+order of ops:
