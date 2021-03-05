@@ -2,7 +2,9 @@
 
 <h3>@Model["order"].OrderTitle</h3>
 <h4>Who's buyin': @Model["vendor"].VendorName</h4>
-<h4>Description: @Model["vendor"].VendorDescription</h4>
+<h4>A lil 'bout this buyer: @Model["vendor"].VendorDescription</h4>
+<h4>$@Model["order"].OrderPrice due on @Model["order"].OrderDate</h4>
+<h4>Additional info on the buyin':  @Model["order"].OrderDescription</h4>
 
 <a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order for buyin'</a>
 <a href="/vendors">See the other buyers</a>
