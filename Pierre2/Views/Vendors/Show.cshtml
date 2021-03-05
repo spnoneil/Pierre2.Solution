@@ -1,0 +1,20 @@
+@using Bakery.Models;
+
+@if (@Model["orders"].Count == 0)
+{
+  <h4>They ain't buyin' nothin' yet!</h4>
+}
+else
+{
+<h4>This is what they're buyin':</h4>
+
+<ol>
+  @foreach (Order order in @Model["orders"])
+  {
+    <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.OrderDescription</a></li>
+  }
+</ol>
+}
+<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add some buyin' for this buyer</a></p>
+<p><a href="/vendors">Back to who's buyin'</a></p>
+<p><a href="/">Back to yr control center, Pierre!</a></p>
