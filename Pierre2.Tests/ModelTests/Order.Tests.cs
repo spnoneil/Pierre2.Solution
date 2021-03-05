@@ -36,5 +36,26 @@ namespace Bakery.Tests
       Assert.AreEqual(price, resultPrice);
       Assert.AreEqual(date, resultDate);
     }
+    [TestMethod]
+    public void SetProperties_SetsProperties_String()
+    {
+      Order testOrder = new Order("test title", "test desc", 8, "test date");
+      string newTitle = "new test title";
+      string newDesc = "new test desc";
+      int newPrice = 0;
+      string newDate = "new test date";
+      testOrder.OrderTitle = newTitle;
+      testOrder.OrderDescription = newDesc;
+      testOrder.OrderPrice = newPrice;
+      testOrder.OrderDate = newDate;
+      string titleResult = testOrder.OrderTitle;
+      string descResult = testOrder.OrderDescription;
+      int priceResult = testOrder.OrderPrice;
+      string dateResult = testOrder.OrderDate;
+      Assert.AreEqual(newTitle, titleResult);
+      Assert.AreEqual(newDesc, descResult);
+      Assert.AreEqual(newPrice, priceResult);
+      Assert.AreEqual(newDate, dateResult);
+    }
   }
 }
