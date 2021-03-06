@@ -30,8 +30,7 @@
 ## Future implementation
 * _Add delete functionality to both vendor and order classes, individual and all_
 * _Add order search functionality_
-* _Further styling_
-* _Update input (i.e. date)_
+* _Further styling / UI logic_
 
 ## License
 _GPL_
