@@ -1,5 +1,9 @@
 @using Bakery.Models;
 
+@{
+  Layout = "_Layout";
+}
+
 @if (@Model["orders"].Count == 0)
 {
   <h4>They ain't buyin' nothin' yet!</h4>
@@ -15,6 +19,6 @@ else
   }
 </ol>
 }
-<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add some buyin' for this buyer</a></p>
-<p><a href="/vendors">Back to who's buyin'</a></p>
-<p><a href="/">Back to yr control center, Pierre!</a></p>
+<p><a class="link" href='/vendors/@Model["vendor"].Id/orders/new'>Add some buyin' for this buyer</a></p>
+<p><a class="link" href="/vendors">Back to who's buyin'</a></p>
+<p><a class="link" href="/">Back to yr control center, Pierre!</a></p>

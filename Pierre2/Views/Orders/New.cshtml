@@ -1,14 +1,18 @@
+@{
+  Layout = "_Layout";
+}
+
 <h1>What's @Model.VendorName buyin'?!</h1>
 
 <form action="/vendors/@Model.Id/orders" method="post">
   <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
   <label for="orderTitle">What they're buyin':</label>
-  <input id="orderTitle" name="orderTitle" type="text">
+  <input id="orderTitle" name="orderTitle" type="text" required>
   <label for="orderDescription">Additional info about what they're buyin':</label>
-  <input id="orderDescription" name="orderDescription" type="text">
+  <input id="orderDescription" name="orderDescription" type="text" required>
   <label for="orderPrice">Cost of the buyin':</label>
-  <input id="orderPrice" name="orderPrice" type="text">
+  <input id="orderPrice" name="orderPrice" type="text" required>
   <label for="orderDate">Date they're buyin':</label>
-  <input id="orderDate" name="orderDate" type="text">
+  <input id="orderDate" name="orderDate" type="text" required>
   <button type="submit">Add that order!</button>
 </form>

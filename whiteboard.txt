@@ -15,4 +15,12 @@ Order props:
 - date
 - id
 
-order of ops:
+logic???
+
+further:
+delete all orders per vendor
+delete individual orders
+delete all vendors
+delete individual vendors
+search?
+styling

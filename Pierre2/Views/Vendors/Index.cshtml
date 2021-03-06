@@ -1,5 +1,9 @@
 @using Bakery.Models;
 
+@{
+  Layout = "_Layout";
+}
+
 <h1>Who's buyin'?!</h1>
 
 @if (@Model.Count == 0)
@@ -12,5 +16,5 @@
   <p><a href="/vendors/@vendor.Id">@vendor.VendorName</a>: @vendor.VendorDescription</p>
 }
 
-<a href="/vendors/new">Go git you some more buyers for buyin'!</a>
-<a href="/">Or go home, Pierre!</a>
+<a class="link" href="/vendors/new">Go git you some more buyers for buyin'!</a>
+<a class="link" href="/">Or go home, Pierre!</a>
