@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Bakery.Models;
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
 
 namespace Bakery.Tests
 {
@@ -56,6 +56,23 @@ namespace Bakery.Tests
       Assert.AreEqual(newDesc, descResult);
       Assert.AreEqual(newPrice, priceResult);
       Assert.AreEqual(newDate, dateResult);
+    }
+    [TestMethod]
+    public void GetAll_ReturnsOrders_OrderList()
+    {
+      Order testOrder = new Order("test", "test", 1, "test");
+      Order testOrder2 = new Order("test", "test", 0, "test");
+      List<Order> newList = new List<Order> { testOrder, testOrder2 };
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      Order testOrder = new Order("test", "test", 1, "test");
+      Order testOrder2 = new Order("test", "test", 0, "test");
+      Order foundOrder = Order.Find(testOrder2.Id);
+      Assert.AreEqual(testOrder2, foundOrder);
     }
   }
 }

@@ -55,5 +55,15 @@ namespace Bakery.Tests
       Vendor result = Vendor.Find(2);
       Assert.AreEqual(testVendor2, result);
     }
+    [TestMethod]
+    public void AddOrder_AddsOrderToVendorOrderList_OrderList()
+    {
+      Order testOrder = new Order("test", "test", 1, "test");
+      List<Order> testList = new List<Order> {testOrder};
+      Vendor testVendor = new Vendor("test", "test");
+      testVendor.AddOrder(testOrder);
+      List<Order> result = testVendor.Orders;
+      CollectionAssert.AreEqual(testList, result);
+    }
   }
 }
