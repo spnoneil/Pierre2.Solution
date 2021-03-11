@@ -6,7 +6,7 @@
 
 ## Technologies Used
 
-* _C# / .NET Core SDK_
+* _C# / .NET 5.0 SDK / ASP.NET Core_
 * _HTML_
 * _CSS / Bootstrap_
 * _VS Code_
