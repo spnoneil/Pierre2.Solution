@@ -36,4 +36,4 @@
 _GPL_
 ## Contact Information
 
-_Contact no one with any comments, questions, or concerns, unless your name is Travis, Leilani, Victoria, or Lela_
+_Issues can be reported [here](https://github.com/spnoneil/Pierre2.Solution/issues/new) on GitHub_
